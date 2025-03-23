@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="./style/burger.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./style/swiper.css">
+  <link rel="stylesheet" href="./style/courses.css">
+  <link rel="stylesheet" href="./style/modal.css">
+  <link rel="stylesheet" href="./style/modalSign.css">
 </head>
 
 <body>
@@ -401,7 +404,75 @@
       <a href="./courses.html" class="btn courses_btn">Все курсы</a>
     </div>
   </section>
+  <div class="modal">
+    <div class="container">
+      <div class="modal_content">
+        <button>X</button>
+        <div class="modal_hero">
+          <div>
 
+            <h3>Front-end разработчик кто это и чем занимается?</h3>
+            <p>Front-end разработчик – это специалист, который отвечает за создание пользовательского интерфейса (UI)
+              веб-сайтов и веб-приложений. Он делает так, чтобы сайт выглядел привлекательно, работал быстро и был
+              удобным
+              в
+              использовании.</p>
+          </div>
+          <img src="./img/e404.png" alt="">
+        </div>
+        <div class="modal_info">
+          <h4>Основные технологии Front-end разработки</h4>
+          <p>HTML (HyperText Markup Language)
+            Основной язык разметки, который определяет структуру веб-страницы.Позволяет задавать заголовки, абзацы,
+            изображения, ссылки и другие элементы.</p>
+          <h4>CSS (Cascading Style Sheets)</h4>
+          <p>Отвечает за внешний вид сайта.Позволяет стилизовать элементы (цвета, шрифты, анимации, отступы и т.
+            д.).CSS-фреймворки: Bootstrap, Tailwind CSS.</p>
+          <h4>JavaScript (JS)</h4>
+          <p>Язык программирования, который делает сайт динамичным и интерактивным.Используется для создания анимаций,
+            слайдеров, форм, кнопок, модальных окон.JS-библиотеки и фреймворки: React, Vue.js, Angular.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modalSign">
+    <div class="modalSign">
+      <div class="container">
+        <button class="modalSign_close">X</button>
+
+        <div class="card">
+          <div class="card_img">
+            <div>
+              <p>Профессия</p>
+              <h5>Beginner (A1-A2)</h5>
+            </div>
+            <img class="" src="./img/e404.png" alt="">
+          </div>
+          <div class="card_discount">
+            <div class="card_discount_head">
+              <div>
+                <p class="card_discount_title line-through">6000 сом</p>
+                <p class="card_discount_title">5600 сом</p>
+              </div>
+              <div class="card_price_minus">-5%</div>
+            </div>
+            <div class="card_price">
+              <h1 class="card_price_n">3,000</h1>
+              <p class="card_price_som">сом/мес</p>
+            </div>
+          </div>
+        </div>
+        <div class="modalSign_form">
+          <input type="text" placeholder="имя">
+          <div>
+            <input type="text" placeholder="телефона">
+            <input type="text" placeholder="Электронная почта">
+          </div>
+          <button class="btn">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section id="teachers">
     <div class="container ">
@@ -588,6 +659,7 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./js/swiper.js"></script>
+  <script src="./js/courses.js"></script>
   <script src="./js/teachers.js"></script>
   <script src="./js/burger.js"></script>
 </body>

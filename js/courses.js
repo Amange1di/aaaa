@@ -4,18 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            // Удаляем активный класс со всех кнопок
             buttons.forEach(btn => btn.classList.remove('active'));
 
-            // Добавляем активный класс нажатой кнопке
             button.classList.add('active');
 
-            // Скрываем все контенты
             contents.forEach(content => {
                 content.style.display = 'none';
             });
 
-            // Показываем нужный контент
             const categoryId = button.getAttribute('data-category');
             const targetContent = document.getElementById(categoryId);
             targetContent.style.display = 'flex';
@@ -23,15 +19,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Модальное окно
 const modalButtons = document.querySelectorAll('.detailed');
 const modal = document.querySelector('.modal');
 const modalClose = modal.querySelector('button');
 
+let scrollPosition;
+
 modalButtons.forEach(btn => {
     btn.addEventListener('click', () => {
+        scrollPosition = window.scrollY;
+        document.body.style.top = `-${scrollPosition}px`;
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
         modal.classList.add('active');
-        document.body.classList.add('modal-open');
     });
 });
 
@@ -41,7 +41,10 @@ function closeModal() {
 
     setTimeout(() => {
         modal.classList.remove('active');
-        document.body.classList.remove('modal-open');
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, scrollPosition);
         content.style.transform = '';
     }, 300);
 }
@@ -54,27 +57,34 @@ modal.addEventListener('click', (e) => {
     }
 });
 
-// Обработчики для модального окна записи
 const signupButtons = document.querySelectorAll('.signup');
 const modalSign = document.querySelector('.modalSign');
 const modalSignClose = document.querySelector('.modalSign_close');
 
 signupButtons.forEach(button => {
     button.addEventListener('click', () => {
+        scrollPosition = window.scrollY;
+        document.body.style.top = `-${scrollPosition}px`;
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
         modalSign.style.display = 'flex';
-        document.body.classList.add('modal-open');
     });
 });
 
 modalSignClose.addEventListener('click', () => {
     modalSign.style.display = 'none';
-    document.body.classList.remove('modal-open');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, scrollPosition);
 });
 
-// Закрытие по клику вне модального окна
 window.addEventListener('click', (e) => {
     if (e.target === modalSign) {
         modalSign.style.display = 'none';
-        document.body.classList.remove('modal-open');
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, scrollPosition);
     }
 });
