@@ -2,7 +2,7 @@ const swiper = new Swiper('.courses-slider', {
     slidesPerView: 2.5,
     spaceBetween: 20,
     autoplay: {
-        delay: 5000, // 5 секунд
+        delay: 10000, // 10 секунд
         disableOnInteraction: false, 
     },
     navigation: {
