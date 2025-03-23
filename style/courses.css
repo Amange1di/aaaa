@@ -134,10 +134,16 @@ body {
 }
 
 .data_info_content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: none;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 20px;
     transition: all 0.3s ease;
+}
+
+.data_info_content:first-child {
+    display: flex;
 }
 
 .data_info_content:not(:first-child) {

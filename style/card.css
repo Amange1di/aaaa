@@ -1,7 +1,56 @@
+.swiper-slide:nth-child(4n+1) .card {
+    background: #05C17B;
+}
+
+.swiper-slide:nth-child(4n+2) .card {
+    background: #C3F0DF;
+}
+
+.swiper-slide:nth-child(4n+3) .card {
+    background: #DEC5FF;
+}
+
+.swiper-slide:nth-child(4n+4) .card {
+    background: #00008B;
+}
+
+.card:nth-child(4n+1) {
+    background: #05C17B;
+}
+
+.card:nth-child(4n+2) {
+    background: #C3F0DF;
+    color: #000;
+
+}
+
+.card:nth-child(4n+3) {
+    background: #DEC5FF;
+}
+
+.swiper-slide:nth-child(4n+2) .card_list li,
+.swiper-slide:nth-child(4n+2) .card_img,
+.swiper-slide:nth-child(4n+3) .card_list li,
+.swiper-slide:nth-child(4n+3) .card_img,
+.card:nth-child(4n+2) .card_list li,
+.card:nth-child(4n+2) .card_img,
+.card:nth-child(4n+3) .card_list li,
+.card:nth-child(4n+3) .card_img {
+    color: #000;
+}
+
+.card:nth-child(4n+4) {
+    background: #1010a3;
+}
+
+.swiper-slide:nth-child(4n+4) .detailed,
+.card:nth-child(4n+4) .detailed {
+    border: 2px solid #fff;
+}
+
 .card {
     width: 400px;
     min-height: 450px;
-    background: #05C17B;
     border-radius: 20px;
     padding: 30px 20px;
 }
@@ -32,9 +81,9 @@
     padding: 10px 20px;
 
     li {
-        font-family: "Inter ", sans-serif;
+        font-family: "Inter", sans-serif;
         font-weight: 400;
-        font-size: 13.px;
+        font-size: 13px;
         color: #fff;
     }
 }
@@ -137,7 +186,8 @@
     .card_img h5 {
         font-size: 16px;
     }
-    .card_img img{
+
+    .card_img img {
         width: 70px;
     }
 

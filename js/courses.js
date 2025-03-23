@@ -1,25 +1,27 @@
-const buttons = document.querySelectorAll('.data_btns button');
-const contents = document.querySelectorAll('.data_info_content');
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.data_btns button');
+    const contents = document.querySelectorAll('.data_info_content');
 
-function showContent(category) {
-    contents.forEach(content => {
-        content.style.display = 'none';
-    });
-    document.getElementById(category).style.display = 'block';
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Удаляем активный класс со всех кнопок
+            buttons.forEach(btn => btn.classList.remove('active'));
 
-    buttons.forEach(btn => {
-        btn.classList.remove('active');
-    });
-    document.querySelector(`[data-category="${category}"]`).classList.add('active');
-}
+            // Добавляем активный класс нажатой кнопке
+            button.classList.add('active');
 
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        showContent(button.dataset.category);
+            // Скрываем все контенты
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+
+            // Показываем нужный контент
+            const categoryId = button.getAttribute('data-category');
+            const targetContent = document.getElementById(categoryId);
+            targetContent.style.display = 'flex';
+        });
     });
 });
-
-showContent('english');
 
 // Модальное окно
 const modalButtons = document.querySelectorAll('.detailed');

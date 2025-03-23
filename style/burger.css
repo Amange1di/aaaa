@@ -115,9 +115,8 @@
     transition: color 0.3s ease;
 }
 
-.burger-menu__nav_nav:hover {
-    color: #05C17B;
-}
+.burger-menu__nav_nav {
+max-width: 200px;}
 
 @media (max-width: 768px) {
     .burger-menu {

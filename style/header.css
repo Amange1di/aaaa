@@ -9,6 +9,7 @@ header {
     justify-content: space-between;
     position: relative;
     /* добавлено */
+    /* font-family: "SF Pro Text", sans-serif; */
 
     img {
         width: 200px;
@@ -28,7 +29,6 @@ header ul {
 header ul a {
     text-decoration: none;
     color: #000;
-    font-family: "SF Pro Text", sans-serif;
     font-weight: 400;
     font-size: 20px;
     transition: color 0.3s ease;
