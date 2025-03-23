@@ -1,6 +1,7 @@
 .burger-menu {
     position: relative;
     display: none !important;
+    z-index: 999999;
 }
 
 #menu__toggle {
@@ -42,7 +43,7 @@
     /* изменено */
     transform: translateY(-50%);
     /* добавлено */
-    z-index: 9999;
+    z-index: 999999999999;
 }
 
 .menu__btn>span,
